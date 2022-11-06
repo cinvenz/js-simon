@@ -16,7 +16,7 @@ eleSpan.innerHTML += `<span">${arrRandoms}</span>`;
 
 setTimeout(function () {
     contNumber.classList.add('hidden')
-}, 5000)
+}, 30000)
     
 const numUser = [];
 setTimeout(function () {
@@ -49,6 +49,6 @@ setTimeout(function () {
    
     
     
-}, 6000)
+}, 31000)
 
 
