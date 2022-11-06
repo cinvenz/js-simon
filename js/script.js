@@ -1,7 +1,7 @@
 const contNumber = document.querySelector('.container-number')
 
 
-const arrRandoms = []
+const arrRandoms = [];
 while(arrRandoms.length < 5) {
     let randomNumber = Math.round(Math.random()*100);
  
@@ -16,10 +16,33 @@ eleSpan.innerHTML += `<span">${arrRandoms}</span>`;
 
 setTimeout(function () {
     contNumber.classList.add('hidden')
-}, 4000)
+}, 5000)
     
+const numUser = [];
+setTimeout(function () {
+    
+    for(let i = 0; i<5; i++) {
+        let insertNumber = parseInt(prompt('inserisci i numeri che ricordi'));
+        if (!numUser.includes(insertNumber)){
+            numUser.push(insertNumber);
+        }
 
-// const numUser = [];
-// for(let i = 0; i<5; i++) {
-//     let insertNumber
-// }
+    
+    }
+
+    const getResult = function (arrRandoms, numUser) {
+        let i = arrRandoms.length;
+        if (i != numUser.length) return false;
+     
+        while (i--) {
+          if (arrRandoms[i] !== numUser[i]) return false;
+        }
+        return true;
+      };
+     
+    console.log("Comparing a1 and a2", getResult(arrRandoms, numUser));
+    
+}, 6000)
+
+
+
