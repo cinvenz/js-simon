@@ -30,7 +30,7 @@ setTimeout(function () {
     
     }
 
-    const getResult = function (arrRandoms, numUser) {
+    let getResult = function (arrRandoms, numUser) {
         let i = arrRandoms.length;
         if (i != numUser.length) return false;
      
@@ -40,9 +40,15 @@ setTimeout(function () {
         return true;
       };
      
-    console.log("Comparing a1 and a2", getResult(arrRandoms, numUser));
+    console.log("Comparing arrRandoms and numUser", getResult(arrRandoms, numUser));
+
+    if (getResult = true) {
+        alert("Hai indovinato " + numUser.length + " numeri. Esattamente i numeri: " + numUser)
+        console.log(numUser)
+    }
+   
+    
     
 }, 6000)
-
 
 
