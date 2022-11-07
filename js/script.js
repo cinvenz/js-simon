@@ -16,7 +16,7 @@ eleSpan.innerHTML += `<span">${arrRandoms}</span>`;
 
 setTimeout(function () {
     contNumber.classList.add('hidden')
-}, 6000)
+}, 30000)
     
 const numUser = [];
 setTimeout(function () {
@@ -43,10 +43,11 @@ setTimeout(function () {
     console.log("Comparing arrRandoms and numUser", getResult(arrRandoms, numUser));
 
     if (getResult = true) {
-        const resultNumber = arrRandoms.filter(element => numUser.includes(element));
-        alert('I numeri indovinati sono: ' + resultNumber)
+        let resultNumber = []
+        resultNumber = arrRandoms.filter(element => numUser.includes(element));
+        alert(`hai indovinato ${resultNumber.length} numeri. I numeri indovinati sono: ${resultNumber}`)
     }
      
-}, 7000)
+}, 31000)
 
 
